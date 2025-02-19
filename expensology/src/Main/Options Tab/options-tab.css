@@ -9,6 +9,7 @@
     @apply
     flex
     flex-wrap
-    justify-between
-    w-1/2
+    justify-start
+    gap-3
+    w-[45%]
 }

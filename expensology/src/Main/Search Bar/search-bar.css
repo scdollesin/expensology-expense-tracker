@@ -1,7 +1,7 @@
 .Search-bar {
     @apply
-    h-12
-    w-[71.5%]
+    h-10
+    w-[65%]
     min-w-80
     bg-white-1
     flex

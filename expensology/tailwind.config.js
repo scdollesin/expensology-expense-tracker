@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         light_blue: {
           1:'#BDD5EA',
+          2:'#E0EBF5'
         },
         blue: {
           1:'#577399',
