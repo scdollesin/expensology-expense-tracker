@@ -1,4 +1,4 @@
-import './Header.css';
+import './header.css';
 import logo from './expensology-rounded-icon.png';
 
 
