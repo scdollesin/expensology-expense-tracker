@@ -2,7 +2,7 @@ import './add-expense-modal.css';
 import { IoClose } from "react-icons/io5";
 import { useState } from "react";
 
-function AddExpenseModal({isOpen, onClose}) {
+function AddExpenseModal({isOpen, onClose, onAddExpense}) {
     const [formData, setFormData] = useState({
         description: "",
         amount: "",
@@ -36,6 +36,10 @@ function AddExpenseModal({isOpen, onClose}) {
             const expenses = JSON.parse(localStorage.getItem("expenses")) || [];
             const updatedExpenses = [...expenses, formData];
             localStorage.setItem("expenses", JSON.stringify(updatedExpenses));
+
+            // Pass newly added expense to Main so it can be added to the list
+            onAddExpense(formData);
+
             handleClose();
         }
     };

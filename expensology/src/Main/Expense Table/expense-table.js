@@ -1,14 +1,6 @@
 import './expense-table.css';
-import { useState, useEffect } from "react";
 
-function ExpenseTable() {
-    const [expenses, setExpenses] = useState([]);
-
-    // Retrieve past expenses from localStorage
-    useEffect(() => {
-        const pastExpenses = JSON.parse(localStorage.getItem("expenses")) || [];
-        setExpenses(pastExpenses);
-    }, []);
+function ExpenseTable({expenses}) {
 
     // Calculate total amount of expenses
     const totalAmount = expenses.reduce((sum, expense) => sum + parseFloat(expense.amount || 0), 0);

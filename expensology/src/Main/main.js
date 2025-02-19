@@ -2,13 +2,24 @@ import './main.css';
 import SearchBar from './Search Bar/search-bar.js';
 import NewExpenseButton from './New Expense Button/new-expense-btn.js';
 import ViewToggle from './View Toggle/view-toggle.js';
-import { useState } from "react";
+import {useState, useEffect} from "react";
 import AddExpenseModal from './Add Expense Modal/add-expense-modal.js';
 import ExpenseTable from './Expense Table/expense-table.js';
 
 function Main() {
   const [isOpenAddExpenseModal, setIsOpenAddExpenseModal] = useState(false);
-  const [isNewExpenseSubmitted, setIsNewExpenseSubmitted] = useState(false);
+  const [expenses, setExpenses] = useState([]);
+
+  // Retrieve past expenses from localStorage
+  useEffect(() => {
+    const pastExpenses = JSON.parse(localStorage.getItem("expenses")) || [];
+    setExpenses(pastExpenses);
+  }, []);
+
+  // Adds new expenses to the existing list
+  const handleAddExpense = (newExpense) => {
+    setExpenses((prevExpenses) => [newExpense, ...prevExpenses]);
+  };
 
   return (
     <div className="App">
@@ -22,8 +33,12 @@ function Main() {
             <ViewToggle/>
           </div>
         </div>
-        <AddExpenseModal isOpen={isOpenAddExpenseModal} onClose={() => setIsOpenAddExpenseModal(false)} />
-        <ExpenseTable/>
+        <AddExpenseModal
+          isOpen={isOpenAddExpenseModal}
+          onClose={() => setIsOpenAddExpenseModal(false)}
+          onAddExpense={handleAddExpense}
+        />
+        <ExpenseTable expenses={expenses} />
       </main>
     </div>
   );
