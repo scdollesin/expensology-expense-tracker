@@ -6,7 +6,7 @@ function Searchbar() {
         <div className="Search-bar">
             <GrSearch className="Search-icon"/>
             <input className="Search-input" type='text' placeholder='Search descriptions...'/>
-      </div>
+        </div>
     );
 }
 

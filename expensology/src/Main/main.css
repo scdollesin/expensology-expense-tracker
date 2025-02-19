@@ -7,4 +7,29 @@
     flex-col
     justify-start
     px-12
-  }
+}
+
+.Options-tab {
+  @apply
+  flex
+  flex-wrap
+  w-full
+  justify-between
+  gap-3
+}
+
+.Options-left-container {
+  @apply
+  flex
+  flex-wrap
+  justify-start
+  gap-3
+  w-[45%]
+}
+
+.Options-right-container {
+  @apply
+  justify-end
+  w-auto
+  min-w-[265px]
+}
