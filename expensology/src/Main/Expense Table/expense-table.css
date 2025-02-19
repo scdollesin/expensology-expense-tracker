@@ -13,6 +13,7 @@
 .Expense-table {
     @apply
     w-full
+    table-fixed
     border-collapse
     bg-white-1
     rounded-xl
@@ -54,6 +55,8 @@
 .Expense-row.placeholder {
     @apply
     text-gray-500
+    hover:bg-white-1
+    text-center
 }
 
 .Spacer-row {

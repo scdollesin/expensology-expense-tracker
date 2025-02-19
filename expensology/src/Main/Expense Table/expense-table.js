@@ -31,11 +31,9 @@ function ExpenseTable({expenses}) {
                         ))
                     ):(
                         <tr>
-                            <td
-                                colSpan="4"
-                                className="Expense-row placeholder text">
-                                No expenses recorded
-                            </td>
+                            <td className="Expense-row placeholder text"> </td>
+                            <td className="Expense-row placeholder text" colSpan="2">No expenses recorded</td>
+                            <td className="Expense-row placeholder text"></td>
                         </tr>
                     )}
                     <tr className="Spacer-row">
