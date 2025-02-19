@@ -1,0 +1,35 @@
+.Search-bar {
+    @apply
+    h-12
+    w-[71.5%]
+    min-w-80
+    bg-white-1
+    flex
+    flex-row
+    justify-start
+    items-center
+    pb-1
+    rounded-2xl
+    border-[0.5px]
+    border-light_blue-1
+    shadow-sm
+}
+
+.Search-input {
+    @apply
+    h-full
+    bg-white-1
+    focus:outline-none
+    text-[Roboto]
+    text-blue-1
+    placeholder-blue-1
+}
+
+.Search-icon {
+    @apply
+    min-w-6
+    text-blue-1
+    mr-2
+    ml-6
+    mt-[3px]
+}

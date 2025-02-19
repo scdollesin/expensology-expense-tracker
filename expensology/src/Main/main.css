@@ -1,0 +1,10 @@
+.App-main{
+    @apply
+    bg-white-1
+    h-[calc(100vh-120px)]
+    pt-11
+    flex
+    flex-col
+    justify-start
+    px-12
+  }
