@@ -1,0 +1,36 @@
+.App-logo {
+    @apply
+    h-[67px]
+    w-[67px]
+    mr-5
+  }
+  
+  .App-header {
+    @apply
+    h-[120px]
+    bg-white-1
+    pt-10
+    px-12
+  }
+  
+  .App-brand-container {
+    @apply
+    flex
+    flex-row
+  }
+  
+  .App-name {
+    @apply
+    text-gray-1
+    text-4xl
+    font-[Roboto]
+    font-bold
+    mb-1
+  }
+  
+  .App-tagline {
+    @apply
+    text-gray-1
+    font-[Roboto]
+    font-light
+  }

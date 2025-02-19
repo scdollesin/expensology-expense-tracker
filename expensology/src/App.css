@@ -2,57 +2,8 @@
   align-content: center;
 }
 
-.App-logo {
-  @apply
-  h-[67px]
-  w-[67px]
-  mr-5
-}
-
-.App-header {
-  @apply
-  h-[120px]
-  bg-white-1
-  pt-10
-  px-12
-}
-
-.App-brand-container {
-  @apply
-  flex
-  flex-row
-}
-
-.App-name {
-  @apply
-  text-gray-1
-  text-4xl
-  font-[Roboto]
-  font-bold
-  mb-1
-}
-
-.App-tagline {
-  @apply
-  text-gray-1
-  font-[Roboto]
-  font-light
-}
-
-
 .App-main{
   @apply
   bg-white-1
   h-[calc(100vh-120px)]
 }
-
-/* .App-header {
-  background-color: #F7F7FF;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
