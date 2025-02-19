@@ -2,8 +2,11 @@ import './expense-table.css';
 
 function ExpenseTable({expenses}) {
 
+    // Sort the expenses by date with the most recent on top
+    const sortedExpenses = [...expenses].sort((a, b) => new Date(b.date) - new Date(a.date));
+
     // Calculate total amount of expenses
-    const totalAmount = expenses.reduce((sum, expense) => sum + parseFloat(expense.amount || 0), 0);
+    const totalAmount = sortedExpenses.reduce((sum, expense) => sum + parseFloat(expense.amount || 0), 0);
 
     return (
         <div className='Expense-table-container'>
@@ -17,12 +20,12 @@ function ExpenseTable({expenses}) {
                     </tr>
                 </thead>
                 <tbody className="Table-body">
-                    {expenses.length > 0 ? (
-                        expenses.map((expense, index) => (
+                    {sortedExpenses.length > 0 ? (
+                        sortedExpenses.map((expense, index) => (
                             <tr key={index} className="Expense-row">
                                 <td className="Expense-row text number">{index + 1}</td>
                                 <td className="Expense-row text">{expense.description}</td>
-                                <td className="Expense-row text">$ {expense.amount}</td>
+                                <td className="Expense-row text">$ {parseFloat(expense.amount).toFixed(2)}</td>
                                 <td className="Expense-row text">{expense.date}</td>
                             </tr>
                         ))
