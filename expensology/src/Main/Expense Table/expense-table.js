@@ -15,8 +15,8 @@ function ExpenseTable({expenses}) {
                     <tr>
                         <th className="Table-header-text number"> </th>
                         <th className="Table-header-text description">Description</th>
-                        <th className="Table-header-text amount">Amount</th>
                         <th className="Table-header-text date">Date</th>
+                        <th className="Table-header-text amount">Amount</th>
                     </tr>
                 </thead>
                 <tbody className="Table-body">
@@ -25,15 +25,13 @@ function ExpenseTable({expenses}) {
                             <tr key={index} className="Expense-row">
                                 <td className="Expense-row text number">{index + 1}</td>
                                 <td className="Expense-row text">{expense.description}</td>
-                                <td className="Expense-row text">$ {parseFloat(expense.amount).toFixed(2)}</td>
                                 <td className="Expense-row text">{expense.date}</td>
+                                <td className="Expense-row text">$ {parseFloat(expense.amount).toFixed(2)}</td>
                             </tr>
                         ))
                     ):(
                         <tr>
-                            <td className="Expense-row placeholder text"> </td>
-                            <td className="Expense-row placeholder text" colSpan="2">No expenses recorded</td>
-                            <td className="Expense-row placeholder text"></td>
+                            <td className="Expense-row placeholder text" colSpan="4">No expenses recorded</td>
                         </tr>
                     )}
                     <tr className="Spacer-row">

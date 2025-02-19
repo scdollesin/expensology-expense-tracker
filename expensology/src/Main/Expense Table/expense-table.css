@@ -1,46 +1,37 @@
 .Expense-table-container {
     @apply
     w-full
-    h-[100%]
+    h-[83%]
     flex
     my-6
-    bg-purple-200
     border
     border-light_blue-1
     rounded-xl
+    shadow-sm
+    overflow-y-scroll
 }
 
 .Expense-table {
     @apply
     w-full
+    h-full
     table-fixed
     border-collapse
     bg-white-1
     rounded-xl
-    overflow-hidden
 }
 
 .Table-header {
     @apply
     bg-gray-1
     text-white-1
-}
-
-.Table-body {
-    @apply
-    overflow-auto
-    flex-grow
-}
-
-.Table-header-text {
-    @apply
-    p-[10px]
+    h-12
     text-left
 }
 
 .Expense-row {
     @apply
-    p-[10px]
+    py-[10px]
     border-b
     border-light_blue-1
     text-gray-1
@@ -56,7 +47,10 @@
     @apply
     text-gray-500
     hover:bg-white-1
+    border-0
+    h-full
     text-center
+    align-middle
 }
 
 .Spacer-row {
@@ -85,4 +79,14 @@
     text-left
     border-l
     border-light_blue-1
+}
+
+th:first-of-type {
+    @apply
+    w-[7%]
+}
+
+th:nth-of-type(2) {
+    @apply
+    w-[50%]
 }
