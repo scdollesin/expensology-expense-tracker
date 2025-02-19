@@ -2,12 +2,12 @@
     @apply
     w-full
     h-[100%]
+    flex
     my-6
     bg-purple-200
     border
     border-light_blue-1
     rounded-xl
-    flex
 }
 
 .Expense-table {
@@ -15,8 +15,8 @@
     w-full
     border-collapse
     bg-white-1
-    border
     rounded-xl
+    overflow-hidden
 }
 
 .Table-header {
@@ -39,15 +39,11 @@
 
 .Expense-row {
     @apply
+    p-[10px]
     border-b
     border-light_blue-1
     text-gray-1
     hover:bg-light_blue-4
-}
-
-.Expense-row.text {
-    @apply
-    p-[10px]
 }
 
 .Expense-row.number {
@@ -59,7 +55,6 @@
     @apply
     text-gray-500
 }
-
 
 .Spacer-row {
     @apply
