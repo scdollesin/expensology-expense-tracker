@@ -1,0 +1,82 @@
+.Black-overlay {
+    @apply
+    fixed
+    inset-0
+    flex
+    items-center
+    justify-center
+    bg-black/50
+}
+
+.Modal-container{
+    @apply 
+    bg-white-1
+    p-6
+    rounded-lg
+    shadow-lg
+    w-96
+    relative
+    text-[Roboto]
+}
+
+.Close-button {
+    @apply
+    absolute
+    top-4
+    right-4
+    text-gray-1
+    hover:text-gray-900;
+}
+
+.Modal-title {
+    @apply
+    text-3xl
+    mb-8
+    font-bold
+    text-blue-1
+    text-center
+}
+
+.Modal-input-field {
+    @apply
+    w-full
+    text-gray-1
+    rounded-2xl
+    py-2
+    px-4
+    mb-3
+    focus:outline-none
+    bg-white-1
+    border
+    border-light_blue-1
+}
+
+.Modal-input-field.date {
+    @apply
+   text-blue-1
+   
+}
+
+
+.Modal-label {
+    @apply
+    block
+    mb-1
+    ml-4
+    text-blue-1
+}
+
+.Submit-btn {
+    @apply
+    w-full
+    bg-blue-1
+    text-white-1
+    py-3
+    mt-6
+    rounded-md
+    hover:bg-gray-1
+}
+
+::-webkit-calendar-picker-indicator {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%23bbbbbb" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+  }

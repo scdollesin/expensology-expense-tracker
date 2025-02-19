@@ -1,10 +1,7 @@
 import './new-expense-btn.css';
 import { IoMdAddCircleOutline } from "react-icons/io";
-import { useState } from "react";
 
 function NewExpenseButton({ onOpen }) {
-    const [isOpenModal, setIsOpenModal] = useState(false);
-
     return (
         <button
             type="button" 
