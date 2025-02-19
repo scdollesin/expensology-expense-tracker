@@ -9,6 +9,7 @@ import ExpenseTable from './Expense Table/expense-table.js';
 function Main() {
   const [isOpenAddExpenseModal, setIsOpenAddExpenseModal] = useState(false);
   const [expenses, setExpenses] = useState([]);
+  const [searchQuery, setSearchQuery] = useState(""); 
 
   // Retrieve past expenses from localStorage
   useEffect(() => {
@@ -21,12 +22,17 @@ function Main() {
     setExpenses((prevExpenses) => [newExpense, ...prevExpenses]);
   };
 
+  // Filter expenses based on search query
+  const filteredExpenses = expenses.filter(expense =>
+    expense.description.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div className="App">
       <main className="App-main">
         <div className="Options-tab">
           <div className="Options-left-container">
-            <SearchBar/>
+            <SearchBar onSearch={setSearchQuery}/>
             <NewExpenseButton onOpen={() => setIsOpenAddExpenseModal(true)}/>
           </div>
           <div className="Options-right-container">
@@ -38,7 +44,7 @@ function Main() {
           onClose={() => setIsOpenAddExpenseModal(false)}
           onAddExpense={handleAddExpense}
         />
-        <ExpenseTable expenses={expenses} />
+        <ExpenseTable expenses={filteredExpenses} />
       </main>
     </div>
   );
