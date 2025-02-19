@@ -4,9 +4,11 @@ import NewExpenseButton from './New Expense Button/new-expense-btn.js';
 import ViewToggle from './View Toggle/view-toggle.js';
 import { useState } from "react";
 import AddExpenseModal from './Add Expense Modal/add-expense-modal.js';
+import ExpenseTable from './Expense Table/expense-table.js';
 
 function Main() {
   const [isOpenAddExpenseModal, setIsOpenAddExpenseModal] = useState(false);
+  const [isNewExpenseSubmitted, setIsNewExpenseSubmitted] = useState(false);
 
   return (
     <div className="App">
@@ -19,8 +21,9 @@ function Main() {
           <div className="Options-right-container">
             <ViewToggle/>
           </div>
-          <AddExpenseModal isOpen={isOpenAddExpenseModal} onClose={() => setIsOpenAddExpenseModal(false)} />
         </div>
+        <AddExpenseModal isOpen={isOpenAddExpenseModal} onClose={() => setIsOpenAddExpenseModal(false)} />
+        <ExpenseTable/>
       </main>
     </div>
   );

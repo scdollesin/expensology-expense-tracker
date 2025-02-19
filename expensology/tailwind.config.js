@@ -22,7 +22,8 @@ module.exports = {
         light_blue: {
           1:'#BDD5EA',
           2:'#E0EBF5',
-          3:'#D4E3F1'
+          3:'#D4E3F1',
+          4:'#ECF3FA'
         },
         blue: {
           1:'#577399',

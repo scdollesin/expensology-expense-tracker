@@ -1,0 +1,90 @@
+.Expense-table-container {
+    @apply
+    w-full
+    h-[100%]
+    my-6
+    bg-purple-200
+    border
+    border-light_blue-1
+    rounded-xl
+    flex
+}
+
+.Expense-table {
+    @apply
+    w-full
+    border-collapse
+    bg-white-1
+    border
+    rounded-xl
+}
+
+.Table-header {
+    @apply
+    bg-gray-1
+    text-white-1
+}
+
+.Table-body {
+    @apply
+    overflow-auto
+    flex-grow
+}
+
+.Table-header-text {
+    @apply
+    p-[10px]
+    text-left
+}
+
+.Expense-row {
+    @apply
+    border-b
+    border-light_blue-1
+    text-gray-1
+    hover:bg-light_blue-4
+}
+
+.Expense-row.text {
+    @apply
+    p-[10px]
+}
+
+.Expense-row.number {
+    @apply
+    pl-6
+}
+
+.Expense-row.placeholder {
+    @apply
+    text-gray-500
+}
+
+
+.Spacer-row {
+    @apply
+    h-full
+}
+
+.Table-footer {
+    @apply
+    bg-white-1
+    font-bold
+    border-t border-light_blue-1 
+    text-blue-1 
+    text-lg
+}
+
+.Total-text {
+    @apply
+    p-3
+    text-right
+}
+
+.Total-value {
+    @apply
+    p-3
+    text-left
+    border-l
+    border-light_blue-1
+}

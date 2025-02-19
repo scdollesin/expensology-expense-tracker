@@ -1,7 +1,8 @@
 .App-main{
     @apply
     bg-white-1
-    h-[calc(100vh-120px)]
+    h-[calc(100vh-100px)]
+    w-full
     pt-9
     flex
     flex-col
