@@ -3,6 +3,8 @@
     flex
     flex-wrap
     w-full
+    justify-between
+    gap-3
 }
 
 .Options-left-container {
@@ -12,4 +14,11 @@
     justify-start
     gap-3
     w-[45%]
+}
+
+.Options-right-container {
+    @apply
+    justify-end
+    w-auto
+    min-w-[265px]
 }

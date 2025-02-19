@@ -1,0 +1,33 @@
+.View-toggle {
+    @apply
+    h-10
+    w-auto
+    flex
+    flex-row
+    justify-start
+    items-center
+    px-[6px]
+    bg-light_blue-2
+    rounded-lg
+    space-x-2
+    text-blue-1
+    text-[Roboto]
+}
+
+.View-option.active {
+    @apply
+    bg-white-1
+    shadow-sm
+}
+
+.View-option.inactive {
+    @apply
+    hover:bg-light_blue-3
+}
+
+.View-option {
+    @apply
+    py-[3px]
+    px-4
+    rounded-lg
+}
