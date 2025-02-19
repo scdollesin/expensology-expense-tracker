@@ -9,13 +9,13 @@
     @apply
     h-[120px]
     bg-white-1
-    pt-10
+    pt-8
     px-12
   }
   
   .App-brand-container {
     @apply
-    flex
+    flex 
     flex-row
   }
   

@@ -2,7 +2,7 @@
     @apply
     bg-white-1
     h-[calc(100vh-120px)]
-    pt-11
+    pt-9
     flex
     flex-col
     justify-start
@@ -25,6 +25,7 @@
   justify-start
   gap-3
   w-[45%]
+  min-w-80
 }
 
 .Options-right-container {
