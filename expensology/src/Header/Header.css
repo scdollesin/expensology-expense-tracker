@@ -7,7 +7,7 @@
   
   .App-header {
     @apply
-    h-[120px]
+    h-1/6
     bg-white-1
     pt-8
     px-12
